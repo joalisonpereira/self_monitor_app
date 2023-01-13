@@ -3,10 +3,10 @@ import {Container, Title, Inner, ContainerProps} from './styles';
 
 export interface ButtonProps extends ContainerProps {
   children: React.ReactNode;
-  mode: ContainerProps['mode'];
+  variant: ContainerProps['variant'];
 }
 
-function Button({children, mode = 'default', ...props}: ButtonProps) {
+function Button({children, variant, ...props}: ButtonProps) {
   const containerProps = pick(props, [
     'mt',
     'mr',
@@ -17,8 +17,8 @@ function Button({children, mode = 'default', ...props}: ButtonProps) {
   ]);
 
   return (
-    <Container mode={mode} {...containerProps}>
-      <Inner mode={mode} {...props}>
+    <Container variant={variant} {...containerProps}>
+      <Inner variant={variant} {...props}>
         <Title>{children}</Title>
       </Inner>
     </Container>

@@ -17,14 +17,14 @@ function Intro({}: IntroProps) {
     <Container>
       <Title>The only productivity app you need, go ahead!</Title>
       <Body>
-        <Button onPress={() => navigation.navigate('Home')} mode="default">
+        <Button onPress={() => navigation.navigate('Home')} variant="default">
           Start
         </Button>
         <ButtonGroup>
-          <Button mode="darked" width="48%" mt={2}>
+          <Button variant="darked" width="48%" mt={2}>
             Google
           </Button>
-          <Button mode="darked" width="48%" mt={2}>
+          <Button variant="darked" width="48%" mt={2}>
             Apple
           </Button>
         </ButtonGroup>

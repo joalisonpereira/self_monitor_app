@@ -2,10 +2,10 @@ import {Container, ContainerProps, Line, LineProps} from './styles';
 
 export interface ProgressProps extends ContainerProps, LineProps {}
 
-function Progress({color, filled: fillSize, ...props}: ProgressProps) {
+function Progress({color, filled, ...props}: ProgressProps) {
   return (
     <Container {...props}>
-      <Line color={color} filled={fillSize} />
+      <Line testID="progress-line" color={color} filled={filled} />
     </Container>
   );
 }

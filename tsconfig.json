@@ -6,7 +6,13 @@
 
     /* Completeness */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */,
-    "types": ["@types/styled-components-react-native"],
-    "baseUrl": "."
-  }
+    "types": ["@types/styled-components-react-native", "jest"],
+    "baseUrl": ".",
+    "isolatedModules": false
+  },
+  "include": [
+    "src/**/*",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
 }

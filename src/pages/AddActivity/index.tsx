@@ -59,7 +59,7 @@ function AddActivity({}: AddActivityProps) {
           ))}
         </CategoryRow>
       </Inner>
-      <Button mode="default" onPress={formik.submitForm}>
+      <Button variant="default" onPress={formik.submitForm}>
         Send
       </Button>
     </Container>

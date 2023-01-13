@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import {MarginMetrics, MarginMetricsProps} from 'src/styles/utils';
 
 export interface ModeProps {
-  mode: 'default' | 'darked';
+  variant: 'default' | 'darked';
 }
 
 export interface ContainerProps
@@ -24,15 +24,17 @@ export const Container = styled.View<ContainerProps>`
     ({
       default: props.theme.primary,
       darked: 'grey',
-    }[props.mode])};
+    }[props.variant])};
   ${MarginMetrics};
 `;
 
-export const Inner = styled(Pressable).attrs<ModeProps>(({mode, theme}) => ({
-  android_ripple: {
-    color: mode === 'default' ? '#00B0F9' : theme.dark2,
-  },
-}))<ModeProps>`
+export const Inner = styled(Pressable).attrs<ModeProps>(
+  ({variant: mode, theme}) => ({
+    android_ripple: {
+      color: mode === 'default' ? '#00B0F9' : theme.dark2,
+    },
+  }),
+)<ModeProps>`
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -41,7 +43,7 @@ export const Inner = styled(Pressable).attrs<ModeProps>(({mode, theme}) => ({
     ({
       default: props.theme.primary,
       darked: 'transparent',
-    }[props.mode])};
+    }[props.variant])};
 `;
 
 export const Title = styled.Text`
