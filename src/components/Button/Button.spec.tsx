@@ -1,9 +1,5 @@
-/**
- * @format
- */
-
 import 'react-native';
-import {render, fireEvent} from '@testing-library/react-native';
+import {render, fireEvent} from 'src/test';
 import Button from './';
 
 describe('components/Button', () => {

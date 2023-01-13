@@ -11,9 +11,14 @@ export interface ActivityItemProps {
 
 function ActivityItem({item, onPress}: ActivityItemProps) {
   return (
-    <Container active={!!item.doneAt} onPress={() => onPress(item.id)}>
+    <Container
+      testID="ActivityItem"
+      active={!!item.doneAt}
+      onPress={() => onPress(item.id)}>
       <Title>{item.title}</Title>
-      {!!item.doneAt && <Icon name="check" color={theme.light} />}
+      {!!item.doneAt && (
+        <Icon name="check" color={theme.light} testID="ActivityItem_Icon" />
+      )}
     </Container>
   );
 }

@@ -17,7 +17,10 @@ function Intro({}: IntroProps) {
     <Container>
       <Title>The only productivity app you need, go ahead!</Title>
       <Body>
-        <Button onPress={() => navigation.navigate('Home')} variant="default">
+        <Button
+          testID="start-btn"
+          onPress={() => navigation.navigate('Home')}
+          variant="default">
           Start
         </Button>
         <ButtonGroup>

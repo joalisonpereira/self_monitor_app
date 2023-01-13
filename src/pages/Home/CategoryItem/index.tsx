@@ -19,7 +19,7 @@ export interface CategoryItemProps extends ContainerProps {
 
 function CategoryItem({item, doneLabel, onPress, progress}: CategoryItemProps) {
   return (
-    <Container onPress={onPress}>
+    <Container testID="CategoryItem" onPress={onPress}>
       <BoxIcon color={item.color}>{item.Icon}</BoxIcon>
       <Title mt={2}>{item.title}</Title>
       <Progress mt={2} color={item.color} filled={progress} />

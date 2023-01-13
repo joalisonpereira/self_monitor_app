@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import {ThemeProvider} from 'styled-components/native';
 import {NavigationContainer} from '@react-navigation/native';
 import theme from 'src/styles/theme';
@@ -6,12 +7,12 @@ import {StatusBar} from 'react-native';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <NavigationContainer>
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
         <StatusBar backgroundColor={theme.dark1} />
         <Routes />
-      </NavigationContainer>
-    </ThemeProvider>
+      </ThemeProvider>
+    </NavigationContainer>
   );
 }
 

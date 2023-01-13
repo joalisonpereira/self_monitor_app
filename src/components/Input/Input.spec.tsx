@@ -1,22 +1,17 @@
-/**
- * @format
- */
-
 import 'react-native';
-import {render} from '@testing-library/react-native';
-import wrapThemeProvider from 'src/styles/wrapThemeProvider';
+import {render} from 'src/test';
 import Input from './';
 
 describe('components/Input', () => {
   it('should render component', () => {
-    render(wrapThemeProvider(<Input />));
+    render(<Input />);
   });
 
   it('should render value text', () => {
     const value = 'dummy';
 
     const {getByPlaceholderText} = render(
-      wrapThemeProvider(<Input value={value} placeholder="DummyInput" />),
+      <Input value={value} placeholder="DummyInput" />,
     );
 
     expect(getByPlaceholderText('DummyInput').props.value).toBe(value);
