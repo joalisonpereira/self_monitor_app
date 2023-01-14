@@ -15,8 +15,11 @@ jest.mock('react-native-reanimated', () => {
 // Silence the warning: Animated: `useNativeDriver` is not supported because the native animated module is missing
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
+//Zustand
+jest.mock('zustand');
+
 //Navigation
-// jest.mock('@react-navigation/native', () => ({
-//   ...jest.requireActual('@react-navigation/native'),
-//   useNavigation: () => ({navigate: jest.fn()}),
-// }));
+jest.mock('@react-navigation/native', () => ({
+  ...jest.requireActual('@react-navigation/native'),
+  useNavigation: () => ({navigate: jest.fn(), goBack: jest.fn()}),
+}));

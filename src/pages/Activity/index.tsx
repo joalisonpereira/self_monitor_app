@@ -3,7 +3,7 @@ import {useHeaderHeight} from '@react-navigation/elements';
 import {useCallback, useLayoutEffect} from 'react';
 import {FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {useActivities} from 'src/store/useActivity';
+import {useActivities} from 'src/store/useActivities';
 import theme from 'src/styles/theme';
 import ActivityItem from './ActivityItem';
 import {Container, ContainerProps, HeaderRightBtn} from './styles';

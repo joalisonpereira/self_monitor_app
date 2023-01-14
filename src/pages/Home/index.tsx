@@ -4,7 +4,7 @@ import {useMemo} from 'react';
 import {CATEGORIES} from 'src/common/config';
 import {CategoryTitle} from 'src/common/types';
 import Progress from 'src/components/Progress';
-import {useActivities} from 'src/store/useActivity';
+import {useActivities} from 'src/store/useActivities';
 import theme from 'src/styles/theme';
 import CategoryItem from './CategoryItem';
 import {

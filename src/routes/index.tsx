@@ -6,14 +6,14 @@ import theme from 'src/styles/theme';
 import AddActivity from 'src/pages/AddActivity';
 import {RootStackParamList} from './types';
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+export const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 function Routes() {
   return (
-    <Stack.Navigator
+    <RootStack.Navigator
       screenOptions={{headerShown: false, headerTitleAlign: 'left'}}>
-      <Stack.Screen name="Intro" component={Intro} />
-      <Stack.Screen
+      <RootStack.Screen name="Intro" component={Intro} />
+      <RootStack.Screen
         name="Home"
         component={Home}
         options={{
@@ -24,7 +24,7 @@ function Routes() {
           headerTintColor: theme.light,
         }}
       />
-      <Stack.Screen
+      <RootStack.Screen
         name="Activity"
         component={Activity}
         options={{
@@ -36,7 +36,7 @@ function Routes() {
           headerTintColor: theme.light,
         }}
       />
-      <Stack.Screen
+      <RootStack.Screen
         name="AddActivity"
         component={AddActivity}
         options={{
@@ -48,7 +48,7 @@ function Routes() {
           headerTintColor: theme.light,
         }}
       />
-    </Stack.Navigator>
+    </RootStack.Navigator>
   );
 }
 

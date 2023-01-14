@@ -3,7 +3,7 @@ import {v4 as uuid} from 'uuid';
 import {useFormik} from 'formik';
 import Input from 'src/components/Input';
 import Button from 'src/components/Button';
-import {useActivities} from 'src/store/useActivity';
+import {useActivities} from 'src/store/useActivities';
 import {useNavigation} from '@react-navigation/native';
 import {CATEGORIES} from 'src/common/config';
 import {
@@ -50,6 +50,7 @@ function AddActivity({}: AddActivityProps) {
         <CategoryRow mt={3}>
           {CATEGORIES.map(item => (
             <CategoryButton
+              testID={`CategoryButton_${item.title}`}
               onPress={() => formik.setFieldValue('category', item.title)}
               active={formik.values.category === item.title}
               key={item.title}

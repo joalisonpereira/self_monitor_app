@@ -4,7 +4,7 @@ import {ThemeProvider} from 'styled-components/native';
 import theme from 'src/styles/theme';
 import {NavigationContainer} from '@react-navigation/native';
 
-const AllTheProviders = ({children}: PropsWithChildren<{}>) => {
+const AllTheProviders = ({children}: PropsWithChildren<unknown>) => {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>{children}</NavigationContainer>
