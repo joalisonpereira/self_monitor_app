@@ -57,4 +57,26 @@ describe('pages/Activity', () => {
       expect(useActivities.getState().activities[0].doneAt).toBeTruthy();
     });
   });
+
+  it('should render unmark activity', async () => {
+    const activities = [generateActivity(), generateActivity()];
+
+    const {getByText} = render(
+      <RootStack.Navigator>
+        <RootStack.Screen name="Activity" component={Activity} />
+      </RootStack.Navigator>,
+    );
+
+    act(() => {
+      useActivities.setState({activities});
+    });
+
+    act(() => {
+      fireEvent.press(getByText(activities[0].title));
+    });
+
+    await waitFor(() => {
+      expect(useActivities.getState().activities[0].doneAt).toBeFalsy();
+    });
+  });
 });
